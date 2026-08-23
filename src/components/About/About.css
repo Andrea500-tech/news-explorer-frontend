@@ -1,0 +1,109 @@
+.about {
+  background-color: #ffffff;
+  color: #1a1b22;
+  padding: 80px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.about__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 104px;
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  box-sizing: border-box;
+}
+
+.about__image-container {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.about__avatar {
+  width: 464px;
+  height: 464px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  max-width: 100%;
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__title {
+  font-family: "Roboto Slab", serif;
+  font-size: 40px;
+  line-height: 46px;
+  font-weight: 400;
+  color: #1a1b22;
+  margin: 0 0 24px;
+}
+
+.about__description {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1a1b22;
+  margin: 0 0 16px;
+}
+
+.about__description:last-child {
+  margin-bottom: 0;
+}
+
+/* RESPONSIVE BREAKPOINTS                                    */
+
+@media screen and (max-width: 1024px) {
+  .about__container {
+    padding: 0 40px;
+    gap: 32px;
+  }
+
+  .about__avatar {
+    width: 272px;
+    height: 272px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .about {
+    padding: 32px 0 128px;
+  }
+
+  .about__container {
+    flex-direction: column;
+    padding: 0 16px;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .about__image-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Exact Mobile Dimensions per Figma specs */
+  .about__avatar {
+    width: 272px;
+    height: 272px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .about__title {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+
+  .about__description {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

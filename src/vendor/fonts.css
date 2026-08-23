@@ -1,0 +1,39 @@
+/* Roboto Regular (Weight 400) */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/roboto-400-regular.woff2") format("woff2"),
+       url("./fonts/roboto-400-regular.woff") format("woff");
+}
+
+/* Roboto Medium (Weight 500) */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./fonts/roboto-500.woff2") format("woff2"),
+       url("./fonts/roboto-500.woff") format("woff");
+}
+
+/* Roboto Bold (Weight 700) */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./fonts/roboto-700.woff2") format("woff2"),
+       url("./fonts/roboto-700.woff") format("woff");
+}
+
+/* Roboto Slab Regular (Weight 400) - Used for Card Titles */
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./fonts/roboto-slab-400-regular.woff2") format("woff2"),
+       url("./fonts/roboto-slab-400-regular.woff") format("woff");
+}

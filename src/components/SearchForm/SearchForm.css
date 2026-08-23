@@ -1,0 +1,133 @@
+/* HERO BANNER BASE STYLES                                   */
+
+.hero {
+  position: relative;
+  width: 100%;
+  padding: 86px 0 32px;
+  background-image: url("../../assets/hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.hero__container {
+  width: 100%;
+  max-width: 608px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.hero__title {
+  font-family: "Roboto Slab", serif;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  margin: 0 0 16px;
+  color: #ffffff;
+}
+
+.hero__subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 32px;
+  color: #ffffff;
+}
+
+/* SEARCH FORM LAYOUT (Mobile / Base)                        */
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+.search-form__input {
+  width: 100%;
+  height: 56px;
+  border-radius: 100px;
+  border: none;
+  padding: 0 24px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #1a1b22;
+  outline: none;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.search-form__input::placeholder {
+  color: #b6bcbf;
+}
+
+.search-form__button {
+  width: 100%;
+  height: 56px;
+  background-color: #2f71e5;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.search-form__button:hover {
+  background-color: #347eff;
+}
+
+/* DESKTOP MEDIA QUERY (1024px and above)                   */
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    padding: 160px 0 80px;
+  }
+
+  .hero__container {
+    text-align: center;
+  }
+
+  .hero__title {
+    font-size: 60px;
+    line-height: 64px;
+    margin-bottom: 32px;
+  }
+
+  .hero__subtitle {
+    margin-bottom: 88px;
+  }
+
+  .search-form {
+    flex-direction: row;
+    height: 64px;
+    background-color: #ffffff;
+    border-radius: 100px;
+    position: relative;
+    gap: 0;
+    overflow: hidden; /* Clips children to maintain the 100px pill shape */
+  }
+
+  .search-form__input {
+    height: 64px;
+    background-color: transparent; /* Lets the form background show through */
+    border-radius: 100px;
+    padding-left: 24px;
+    padding-right: 184px; 
+  }
+
+  .search-form__button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 168px;
+    height: 64px;
+    border-radius: 100px; 
+  }
+}

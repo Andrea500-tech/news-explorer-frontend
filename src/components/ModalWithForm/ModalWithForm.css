@@ -1,0 +1,299 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s, opacity 0.2s linear;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.modal_opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Success Modal Modifier */
+.modal_success {
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.modal_success .modal__container_type_success {
+  position: relative;
+  margin: 0;
+  border-radius: 16px;
+  max-width: 430px;
+  width: 100%;
+  padding: 24px 16px;
+  max-height: calc(100vh - 100px);
+  text-align: left;
+}
+
+.modal_success .modal__container_type_success .modal__title {
+  color: #000000;
+  margin-bottom: 14px;
+  text-align: left;
+}
+
+.modal_success .modal__container_type_success .modal__redirect {
+  font-size: 18px;
+  line-height: 22px;
+  text-align: left;
+}
+
+.modal_success .modal__container_type_success .modal__redirect-btn {
+  margin-left: 0;
+}
+
+/* Hidden on desktop by default */
+.modal__mobile-header {
+  display: none;
+}
+
+.modal__container {
+  background-color: #ffffff;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 430px;
+  padding: 34px 36px 28px;
+  position: relative;
+  box-sizing: border-box;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Close Buttons */
+.modal__close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.2s ease;
+}
+
+.modal__close-btn:hover {
+  opacity: 0.6;
+}
+
+.modal__close-btn_desktop {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+}
+
+.modal__close-btn_mobile {
+  display: none;
+}
+
+.modal__close-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Typography */
+.modal__title {
+  font-family: "Roboto Slab", serif;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  color: #1a1b22;
+  margin: 0 0 22px;
+}
+
+/* Form */
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__label {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  color: #2f71e5;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__input {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 9px 0;
+  margin-bottom: 8px;
+  outline: none;
+}
+
+.modal__input:focus {
+  border-bottom-color: #1a1b22;
+}
+
+.modal__error {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ff0000;
+  min-height: 15px;
+  margin-bottom: 12px;
+}
+
+/* Submit Button */
+.modal__submit-btn {
+  background-color: #2f71e5;
+  box-shadow: 0 5px 15px rgba(14, 26, 57, 0.2);
+  border-radius: 100px;
+  border: none;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 20px 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 8px;
+}
+
+.modal__submit-btn:hover {
+  background-color: #347eff;
+}
+
+.modal__submit-btn:active {
+  background-color: #2a65cc;
+}
+
+.modal__submit-btn:disabled {
+  background-color: #e6e8eb;
+  color: #b6bcbf;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* Redirect */
+.modal__redirect {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #000000;
+  margin: 16px 0 0;
+}
+
+.modal__redirect-btn {
+  background: none;
+  border: none;
+  color: #2f71e5;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 4px;
+  text-decoration: none;
+}
+
+.modal__redirect-btn:hover,
+.modal__mobile-logo:hover {
+  opacity: 0.7;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 600px) {
+  .modal {
+    padding: 16px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal__close-btn_desktop {
+    display: none;
+  }
+
+  .modal__mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    z-index: 1100;
+    background-color: #1a1b22;
+  }
+
+  .modal__mobile-logo {
+    font-family: "Roboto Slab", serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .modal__close-btn_mobile {
+    display: flex;
+  }
+
+  /* Default bottom drawer for standard form modals */
+  .modal__container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 56px;
+    bottom: 0;
+    border-radius: 16px 16px 0 0;
+    padding: 24px 16px 40px;
+  }
+
+  /* Success Modal Centered Override */
+  .modal_success {
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .modal_success .modal__container.modal__container_type_success {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    margin: auto;
+    border-radius: 16px;
+    max-width: 315px;
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 80px);
+    padding: 24px 16px;
+    text-align: center;
+  }
+
+  .modal_success .modal__container_type_success .modal__title,
+  .modal_success .modal__container_type_success .modal__redirect {
+    text-align: center;
+    width: 100%;
+  }
+
+  .modal_success .modal__container_type_success .modal__redirect-btn {
+    display: inline-block;
+    margin-left: 4px;
+  }
+}

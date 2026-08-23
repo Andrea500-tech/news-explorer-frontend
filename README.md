@@ -1,16 +1,39 @@
-# React + Vite
+#  NewsExplorer Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+NewsExplorer is a responsive single‑page web application that empowers users to search for real‑time news articles via a third‑party API, save articles to their personalized dashboard, and manage saved content. This project was built as part of the **TripleTen Web Development curriculum**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##  Project Pitch Video
+Watch the pitch video to get a quick overview of the project:
 
-## React Compiler
+[![Watch the video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+##  Features
+- Keyword News Search
+- Responsive Layout
+- User Authentication & Modals
+- Dual Routing
+- BEM Methodology & Semantic HTML
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+---
+
+##  Tech Stack & Architecture
+- React (functional components, hooks, JSX)
+- Vite
+- React Router
+- Vanilla CSS3 (BEM methodology)
+- Git & GitHub
+
+---
+
+##  Getting Started
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/YOUR-USERNAME/news-explorer-frontend.git
+cd news-explorer-frontend
+npm install
+npm run dev

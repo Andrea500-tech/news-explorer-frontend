@@ -1,0 +1,82 @@
+/* --- Base Hero Section --- */
+.hero {
+  position: relative;
+  width: 100%;
+  padding: 160px 0 80px; /* 80px header + 80px original padding */
+  background-image: url("../../assets/hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.hero__container {
+  max-width: 800px; /* keeps text readable on large screens */
+  margin: 0 auto;
+  padding: 0 104px;
+}
+
+.hero__title {
+  font-size: 48px;
+  line-height: 52px;
+  margin-bottom: 24px;
+  text-align: left; /* ensures natural left-to-right flow */
+}
+
+.hero__subtitle {
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 40px;
+  text-align: left; 
+}
+
+/* --- Tablet Responsiveness (768px - 1024px) --- */
+@media screen and (max-width: 1024px) {
+  .hero {
+    padding: 120px 0 80px;
+  }
+
+  .hero__container {
+    padding: 0 40px;
+    max-width: 100%;
+  }
+
+  .hero__title {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+
+  .hero__subtitle {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 32px;
+  }
+}
+
+/* --- Mobile Responsiveness (320px - 640px) --- */
+@media screen and (max-width: 640px) {
+  .hero {
+    padding: 91px 0 32px; /* 56px mobile header + 35px padding */
+  }
+
+  .hero__container {
+    padding: 0 16px;
+  }
+
+  .hero__title {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  .hero__subtitle {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+}

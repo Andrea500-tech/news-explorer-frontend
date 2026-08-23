@@ -1,0 +1,197 @@
+.news-card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  height: 576px;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 22px rgba(148, 148, 148, 0.12);
+  transition: box-shadow 0.2s ease;
+}
+
+.news-card:hover {
+  box-shadow: 0px 10px 32px rgba(148, 148, 148, 0.24);
+}
+
+/* Link wrapper stretching across full card height */
+.news-card__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.news-card__image {
+  width: 100%;
+  height: 272px;
+  object-fit: cover;
+  display: block;
+}
+
+.news-card__content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.news-card__date {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #b6bcbf;
+  margin: 0 0 12px;
+}
+
+.news-card__title {
+  font-family: "Roboto Slab", serif;
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #1a1b22;
+  margin: 0 0 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-card__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1a1b22;
+  margin: 0 0 18px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
+
+.news-card__source {
+  font-family: "Roboto Slab", serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #b6bcbf;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Bookmark/Save Button Base */
+.news-card__button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: opacity 0.2s ease;
+  padding: 0;
+}
+
+.news-card__button:hover {
+  opacity: 0.8;
+}
+
+/* Styles for the common SVG icon tag inside the button */
+.news-card__icon {
+  display: block;
+  object-fit: contain;
+  width: 14px;
+  height: 18px;
+}
+
+/* Specific sizing for the Trash icon on Saved News page */
+.news-card__button_delete .news-card__icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Tooltip on hover */
+.news-card__tooltip {
+  position: absolute;
+  top: 24px;
+  right: 72px;
+  background-color: #ffffff;
+  padding: 11px 20px;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000000;
+  box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 3;
+  white-space: nowrap;
+}
+
+/* Show tooltip when hovering the button */
+.news-card__button:hover + .news-card__tooltip {
+  display: block;
+}
+
+/* Keyword Badge */
+.news-card__keyword {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background-color: #ffffff;
+  padding: 8px 22px;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+  z-index: 2;
+}
+
+/* MOBILE RESPONSIVE (640px and below per Figma) */
+@media screen and (max-width: 640px) {
+  .news-card {
+    height: 440px;
+  }
+
+  .news-card__image {
+    height: 196px;
+  }
+
+  .news-card__content {
+    padding: 16px;
+  }
+
+  .news-card__button {
+    top: 16px;
+    right: 16px;
+  }
+
+  .news-card__keyword {
+    top: 16px;
+    left: 16px;
+  }
+
+  .news-card__title {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  .news-card__text {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 12px;
+    -webkit-line-clamp: 3;
+  }
+}
