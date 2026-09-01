@@ -18,7 +18,7 @@ export default function NewsCard({
 }) {
   const [isHovered, setIsHovered] = useState(false);
 
-  // ✅ Derive saved status from global savedArticles using _id only
+  //  Derive saved status from global savedArticles using _id only
   const isSaved = savedArticles.some((article) => article._id === card._id);
 
   const handleButtonClick = (e) => {

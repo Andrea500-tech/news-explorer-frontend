@@ -5,13 +5,13 @@ NewsExplorer is a responsive single‑page web application that empowers users t
 ---
 
 ##  Project Pitch Video
-Watch the pitch video to get a quick overview of the project:
+Watch my short project pitch video where I walk through the NewsExplorer frontend step by step:
 
-[![Watch the video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[Andrea Kachepa – Project Pitch Video](https://www.loom.com/share/ce7cce551caf42b19c94164721f60cd5)
 
 ---
 
-##  Features
+## Features
 - Keyword News Search
 - Responsive Layout
 - User Authentication & Modals
@@ -33,7 +33,7 @@ Watch the pitch video to get a quick overview of the project:
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/news-explorer-frontend.git
+git clone https://github.com/Andrea500-tech/news-explorer-frontend.git
 cd news-explorer-frontend
 npm install
 npm run dev
